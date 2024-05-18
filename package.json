@@ -1,0 +1,17 @@
+{
+  "name": "hotelsscraper",
+  "version": "1.0.0",
+  "description": "scraper for hotel names from different webpages that use samosoft",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "asiimov",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "puppeteer": "^22.9.0",
+    "twilio": "^5.0.4"
+  }
+}
