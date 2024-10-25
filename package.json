@@ -11,7 +11,10 @@
   "dependencies": {
     "express": "^4.19.2",
     "fs": "^0.0.1-security",
+    "fuse.js": "^7.0.0",
+    "hotelsscraper": "file:",
     "puppeteer": "^22.9.0",
-    "twilio": "^5.0.4"
+    "twilio": "^5.0.4",
+    "xlsx": "^0.18.5"
   }
 }

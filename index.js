@@ -1,5 +1,4 @@
 const HotelScraper = require("./hotelScraper");
-const fs = require("fs");
 
 const countries = {
   Грузия: [
@@ -53,21 +52,14 @@ const countries = {
   ],
 };
 
-function getDistinctValues(arr) {
-  return [...new Set(arr)];
-}
-
-for (const country in countries) {
-  countries[country] = getDistinctValues(countries[country]);
-}
-
 (async () => {
   const scraper = new HotelScraper();
   await scraper.initialize();
 
   for (const countryName in countries) {
-    const cities = countries[countryName];
-    console.log(`Setting up pages for ${countryName}...`);
-    await scraper.scrapeHotelsByCity(countryName, cities);
+    console.log(`Scraping hotels for ${countryName}...`);
+    await scraper.scrapeHotelsByCountry(countryName);
   }
+
+  await scraper.close();
 })();
